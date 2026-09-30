@@ -1,0 +1,423 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f7f4;
+  color: #1d1d1f;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f7f4;
+  border-bottom: 1px solid #e5e2dc;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #7657d9;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.login-btn {
+  border: none;
+  background: #1d1d1f;
+  color: white;
+  padding: 11px 22px;
+  border-radius: 25px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 70px 7%;
+  background:
+    radial-gradient(circle at 80% 20%, #e5ddff 0, transparent 30%),
+    radial-gradient(circle at 20% 80%, #eee7ff 0, transparent 30%),
+    #f8f7f4;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.small-heading {
+  color: #7657d9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 7vw, 86px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  margin-bottom: 28px;
+}
+
+.hero h1 span {
+  color: #7657d9;
+}
+
+.hero-text {
+  max-width: 540px;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+}
+
+.primary-btn {
+  background: #7657d9;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 28px;
+  font-weight: 700;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #aaa;
+  padding: 14px 25px;
+  border-radius: 28px;
+}
+
+/* POSTS */
+
+.posts-section {
+  padding: 90px 7%;
+  background: white;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: 42px;
+  letter-spacing: -2px;
+}
+
+.view-btn {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.post-card {
+  background: #f8f7f4;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-image {
+  height: 220px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.post-image span {
+  background: white;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.image-1 {
+  background: linear-gradient(135deg, #cfc2ff, #7d64dc);
+}
+
+.image-2 {
+  background: linear-gradient(135deg, #ffe0b2, #eaa45d);
+}
+
+.image-3 {
+  background: linear-gradient(135deg, #bce5e3, #65aaa6);
+}
+
+.post-content {
+  padding: 25px;
+}
+
+.post-author {
+  color: #7657d9;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.post-content h3 {
+  font-size: 23px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.post-description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.read-btn {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  padding: 0;
+}
+
+/* ABOUT */
+
+.about-section {
+  padding: 90px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  background: #171717;
+  color: white;
+}
+
+.about-section h2 {
+  font-size: 48px;
+  max-width: 500px;
+}
+
+.about-section > p {
+  color: #bbb;
+  font-size: 18px;
+  line-height: 1.8;
+  align-self: center;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 35px 7%;
+  background: #111;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.login-modal {
+  width: 400px;
+  max-width: 90%;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+}
+
+.login-modal h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.login-modal input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+}
+
+.full-btn {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .nav-links a {
+    display: none;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+}
+.message-box {
+  position: fixed;
+  top: 90px;
+  right: 25px;
+  z-index: 200;
+  background: #1d1d1f;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.message-box button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* BLOG ACTIONS */
+.post-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.delete-btn {
+  border: none;
+  background: #f3e5e5;
+  color: #b33a3a;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #ead0d0;
+}
+
+/* CREATE POST */
+.create-modal {
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.create-modal textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.empty-posts {
+  width: 100%;
+  text-align: center;
+  padding: 50px 20px;
+  grid-column: 1 / -1;
+}
+
+.empty-posts h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.empty-posts p {
+  color: #777;
+}
